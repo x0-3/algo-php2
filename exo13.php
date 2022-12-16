@@ -8,24 +8,21 @@
 
 
 
+class voiture
+{
+    public $marque;
+    public $modele;
+    public $nbPortes;
+    public $vitesseActuelle;
 
-
-function vitesse(){
-    $voiture = array (
-     array("Peugeot","Citroën"), 
-    array("408","C4"), 
-    array(5, 3) , 
-    array(0,0));
-
-    echo " info sur le vehicule <br>";
-    foreach($voiture as $value =>$key){
-        
-        echo $key[1]. "<br>";
-    }
+    function 
 
 
 }
 
+$v1 = new Voiture(array("marque"=>"Peugeot", "modele"=>"408","nbportes"=>"5"));
+$v2 = new Voiture(array("marque"=>"Citroën", "modele"=>"C4","nbportes"=>"3"));
 
-echo vitesse();
+
+
 ?>
