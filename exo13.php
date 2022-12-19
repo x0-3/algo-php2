@@ -15,14 +15,69 @@ class voiture
     public $nbPortes;
     public $vitesseActuelle;
 
-    function 
+    function __construct($marque, $modele, $nbPortes,)
+    {
+        $this -> marque = $marque;
+        $this -> modele = $modele;
+        $this -> nbPortes = $nbPortes;
+    }
+    function get_marque(){
+        return $this -> marque;
+    }
 
+    function get_modele(){
+        return $this -> modele;
+    }
+
+    function get_nbPortes(){
+        return $this -> nbPortes;
+    }
+
+
+    
+
+    function get_demarrer(){
+        return $this -> vitesseActuelle;
+    }
+    function get_accelerer(){
+        return $this -> vitesseActuelle;
+    }
+    function get_stopper(){
+        return $this -> vitesseActuelle;
+    }
 
 }
 
-$v1 = new Voiture(array("marque"=>"Peugeot", "modele"=>"408","nbportes"=>"5"));
-$v2 = new Voiture(array("marque"=>"Citroën", "modele"=>"C4","nbportes"=>"3"));
 
+// car nb 1
+$v1 = new voiture ("Peugeot ", " 408 ", " 5 ");
+
+echo "info vehicule 1 <br> **********************<br>";
+
+echo "Nom et modèle du véhicule : ";
+echo $v1-> get_marque() ;
+echo $v1-> get_modele()."<br>";
+
+echo "Nombres de Portes : ";
+echo $v1-> get_nbPortes()."<br>";
+
+
+
+
+
+echo "<br>";
+
+// car nb 2
+$v2 = new voiture ("Citroën ", " C4 ", " 3 ");
+
+echo "info vehicule 2 <br> **********************<br>";
+
+echo "Nom et modèle du véhicule : ";
+echo $v2-> get_marque() ;
+echo $v2-> get_modele()."<br>";
+
+echo "Nombres de Portes : ";
+echo $v2-> get_nbPortes()."<br>";
 
 
 ?>
