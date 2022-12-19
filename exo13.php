@@ -41,11 +41,14 @@ class voiture
 
 
     function demarrer(){
-        echo "Le vehicule {$this->marque} démarre <br>";
+        echo "Le vehicule {$this->marque} est démarré <br>";
     }
 
     function accelerer(){
-       echo "Le véhicule {$this->marque} accélère <br>";
+    //    echo "Le véhicule {$this->marque} accélère est de {$this->vitesseActuelle} km / h <br>";
+
+    $this->vitesseActuelle = " 50 km / h";
+    echo $this-> vitesseActuelle;
     }
 
     function stopper(){
@@ -55,7 +58,7 @@ class voiture
 
 
 
-
+// car info part
 // car nb 1
 $v1 = new voiture ("Peugeot ", " 408 ", " 5 ","0");
 
@@ -68,51 +71,30 @@ echo $v1-> get_modele()."<br>";
 echo "Nombres de Portes : ";
 echo $v1-> get_nbPortes()."<br>";
 
-echo $v1-> get_vitesseActuelle()."<br>";
-echo $v1-> demarrer()."<br>";
-echo $v1-> accelerer()."<br>";
-echo $v1-> stopper()."<br>";
+echo $v1-> demarrer();// 50 km/h
 
 
+echo "Sa vitesse actuelle est de : ";
+echo $v1-> accelerer() . "<br>";
 
+echo "<br>";
 
+// car nb 2
+$v2 = new voiture ("Citroën ", " C4 ", " 3 ","0");
 
+echo "info vehicule 2 <br> **********************<br>";
 
+echo "Nom et modèle du véhicule : ";
+echo $v2-> get_marque() ;
+echo $v2-> get_modele()."<br>";
 
+echo "Nombres de Portes : ";
+echo $v2-> get_nbPortes()."<br>";
 
+echo $v2->stopper();
 
-
-
-
-
-
-
-
-
-
-
-
-
-// echo "Sa vitesse actuelle est de : ";
-// echo $v1-> get_vitesseActuelle()." km / h <br>";
-
-
-// echo "<br>";
-
-// // car nb 2
-// $v2 = new voiture ("Citroën ", " C4 ", " 3 ","0");
-
-// echo "info vehicule 2 <br> **********************<br>";
-
-// echo "Nom et modèle du véhicule : ";
-// echo $v2-> get_marque() ;
-// echo $v2-> get_modele()."<br>";
-
-// echo "Nombres de Portes : ";
-// echo $v2-> get_nbPortes()."<br>";
-
-// echo "Sa vitesse actuelle est de : ";
-// echo $v2-> get_vitesseActuelle()." km / h <br>";
+echo "Sa vitesse actuelle est de : ";
+echo $v2-> get_vitesseActuelle()." km / h <br>";
 
 
 ?>
