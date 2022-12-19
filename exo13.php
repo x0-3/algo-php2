@@ -65,19 +65,19 @@ echo $v1-> get_nbPortes()."<br>";
 
 
 
-echo "<br>";
+// echo "<br>";
 
-// car nb 2
-$v2 = new voiture ("Citroën ", " C4 ", " 3 ");
+// // car nb 2
+// $v2 = new voiture ("Citroën ", " C4 ", " 3 ");
 
-echo "info vehicule 2 <br> **********************<br>";
+// echo "info vehicule 2 <br> **********************<br>";
 
-echo "Nom et modèle du véhicule : ";
-echo $v2-> get_marque() ;
-echo $v2-> get_modele()."<br>";
+// echo "Nom et modèle du véhicule : ";
+// echo $v2-> get_marque() ;
+// echo $v2-> get_modele()."<br>";
 
-echo "Nombres de Portes : ";
-echo $v2-> get_nbPortes()."<br>";
+// echo "Nombres de Portes : ";
+// echo $v2-> get_nbPortes()."<br>";
 
 
 ?>
