@@ -22,6 +22,7 @@ class voiture
         $this -> nbPortes = $nbPortes;
         $this -> vitesseActuelle = $vitesseActuelle;
     }
+
     function get_marque(){
         return $this -> marque;
     }
@@ -33,24 +34,26 @@ class voiture
     function get_nbPortes(){
         return $this -> nbPortes;
     }
+
     function get_vitesseActuelle(){
         return $this -> vitesseActuelle;
     }
 
 
-    
-
-    function get_demarrer(){
-        return $this -> vitesseActuelle;
-    }
-    function get_accelerer(){
-        return $this -> vitesseActuelle;
-    }
-    function get_stopper(){
-        return $this -> vitesseActuelle;
+    function demarrer(){
+        echo "Le vehicule {$this->marque} démarre <br>";
     }
 
+    function accelerer(){
+       echo "Le véhicule {$this->marque} accélère <br>";
+    }
+
+    function stopper(){
+        echo "Le vehicule {$this->marque} est a l'arrêt <br>";
+    }
 }
+
+
 
 
 // car nb 1
@@ -65,29 +68,51 @@ echo $v1-> get_modele()."<br>";
 echo "Nombres de Portes : ";
 echo $v1-> get_nbPortes()."<br>";
 
-echo "Sa vitesse actuelle est de : ";
-echo $v1-> get_vitesseActuelle()." km / h <br>";
+echo $v1-> get_vitesseActuelle()."<br>";
+echo $v1-> demarrer()."<br>";
+echo $v1-> accelerer()."<br>";
+echo $v1-> stopper()."<br>";
 
 
 
 
 
-echo "<br>";
 
-// car nb 2
-$v2 = new voiture ("Citroën ", " C4 ", " 3 ","0");
 
-echo "info vehicule 2 <br> **********************<br>";
 
-echo "Nom et modèle du véhicule : ";
-echo $v2-> get_marque() ;
-echo $v2-> get_modele()."<br>";
 
-echo "Nombres de Portes : ";
-echo $v2-> get_nbPortes()."<br>";
 
-echo "Sa vitesse actuelle est de : ";
-echo $v2-> get_vitesseActuelle()." km / h <br>";
+
+
+
+
+
+
+
+
+
+
+
+// echo "Sa vitesse actuelle est de : ";
+// echo $v1-> get_vitesseActuelle()." km / h <br>";
+
+
+// echo "<br>";
+
+// // car nb 2
+// $v2 = new voiture ("Citroën ", " C4 ", " 3 ","0");
+
+// echo "info vehicule 2 <br> **********************<br>";
+
+// echo "Nom et modèle du véhicule : ";
+// echo $v2-> get_marque() ;
+// echo $v2-> get_modele()."<br>";
+
+// echo "Nombres de Portes : ";
+// echo $v2-> get_nbPortes()."<br>";
+
+// echo "Sa vitesse actuelle est de : ";
+// echo $v2-> get_vitesseActuelle()." km / h <br>";
 
 
 ?>
