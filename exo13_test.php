@@ -72,7 +72,7 @@ class Voiture {
 }
 
 
-echo "info vehicule 1 <br>";
+echo "info véhicule 1 <br>";
 echo "****************<br>";
 
 $v1 = new Voiture("Peugeot", "408", 5);
@@ -89,7 +89,7 @@ $v1->getVitesseActuelle();
 echo "<br>";
 
 $v2 = new Voiture("Citroën","C4",3);
-echo "info vehicule 2 <br>";
+echo "info véhicule 2 <br>";
 echo "****************<br>";
 // info $v2
 $v2-> afficherInformations();
