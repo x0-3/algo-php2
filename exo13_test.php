@@ -21,6 +21,8 @@ class Voiture {
 
   public function stopper() {
     $this->vitesseActuelle = 0;
+    echo "Le véhicule {$this->marque} est a l'arrêt <br>";
+    echo "Sa vitesse actuelle est de {$this->vitesseActuelle} km / h <br>";
   }
 
   public function getMarque() {
@@ -58,20 +60,24 @@ class Voiture {
   }
 }
 
+echo "info vehicule 1 <br>";
+echo "****************<br>";
+
 // Créer une instance de la classe Voiture
 $v1 = new Voiture("Peugeot", "408", 5);
-
 // Afficher les informations de la$v1
 $v1->afficherInformations();
-
 // Démarrer la$v1
 $v1->demarrer();
-
 // Accélérer la$v1 de 30 km/h
 $v1->accelerer(50);
-
 $v1->getVitesseActuelle();
 
+echo "<br>";
 
-// Stopper la$v1
-$v1->stopper();
+echo "info vehicule 2 <br>";
+echo "****************<br>";
+
+$v2 = new Voiture("Citroën","C4",3);
+$v2-> afficherInformations();
+$v2-> stopper();
