@@ -4,7 +4,7 @@ class voiture{
     public $marque;
     public $modèle;
 
-    public function __construct($marque, $modèle,$autonomie)
+    public function __construct($marque, $modèle, $autonomie)
     {
         $this ->marque=$marque;
         $this ->modèle=$modèle;
@@ -20,17 +20,21 @@ class voiture{
     }
 
     public function getInfo(){
-        echo "Le modele et la marque est : ". $this->marque ." ". $this->modèle . "<br>";
-        echo "a une autonomie de : " . $this->autonomie;
-
+        echo "Le modele et la marque est : ". $this->marque ." " .$this->modèle . "<br>";
     }
 }
+
 
 class VoitureElec extends voiture{
     public $autonomie;
 
     public function get_autonomie(){
         return $this->autonomie;
+    }
+    public function getInfo(){
+        echo "Le modele et la marque est : ". $this->marque ." ". $this->modèle . "<br>";
+        echo "a une autonomie de : " . $this->autonomie ." km / h <br>";
+
     }
 }
 
