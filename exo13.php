@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 // Créer une classe Voiture possédant les propriétés suivantes : marque, modèle, nbPortes et
 // vitesseActuelle ainsi que les méthodes demarrer( ), accelerer( ) et stopper( ) en plus
@@ -52,8 +52,8 @@ class marque extends voiture{
 
     function accelerer(){
 
-    // $this->vitesseActuelle = " 50 km / h";
-    echo "Le véhicule {$this->marque} accélère de {$this->vitesseActuelle}";
+        // $this->vitesseActuelle = " 50 km / h";
+        echo "Le véhicule {$this->marque} accélère de {$this->vitesseActuelle}";
 
     }
 
