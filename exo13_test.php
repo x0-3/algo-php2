@@ -15,6 +15,8 @@ class Voiture {
   private $vitesseActuelle;
   private $estdemarrer = false;
 
+
+  //function to set dif variables
   public function __construct($marque, $modele, $nbPortes, $vitesseActuelle) {
     $this->marque = $marque;
     $this->modele = $modele;
@@ -22,6 +24,7 @@ class Voiture {
     // $this->vitesseActuelle = $vitesseActuelle;
   }
 
+  //function to start the car if "$estdemarrer" is true else go to function stopper and write an error message
   public function demarrer() {  
     if ($estdemarrer=true){
       echo "Le vehicule {$this->marque} est demarrer <br>";
@@ -31,12 +34,14 @@ class Voiture {
     }
   }
 
+  //function to change the speed with the help of "$vitesse" 
   public function accelerer($vitesse) {
     $this->vitesseActuelle += $vitesse;
     echo "Le véhicule {$this->marque} accélere de $vitesse km / h <br>";
 
   }
 
+  //function to stop the car and reset the initial speed 
   public function stopper() {
     $this->vitesseActuelle = 0;
     echo "Le véhicule {$this->marque} est a l'arrêt <br>";
@@ -44,6 +49,8 @@ class Voiture {
 
   }
 
+  //function if "$estdemarrer" is true than substract "$vitesse" from "$vitesseActuelle"
+  // else write an error message
   public function ralentir($vitesse){
 
     if($estdemarrer=true){
@@ -51,60 +58,64 @@ class Voiture {
       echo "Le véhicule {$this->marque} ralentie<br>";
       echo "La voiture ralentie de $vitesse km / h <br>";
     }else{
-      
+      echo "La voiture n'est pas démarrer <br>";
     }
 
   }
 
+  //function to get the brand of the car
   public function getMarque() {
     return $this->marque;
   }
 
+    //function to set the brand of the car
   public function setMarque($marque) {
     $this->marque = $marque;
   }
 
+  //function to get the model of the car
   public function getModele() {
     return $this->modele;
   }
 
+  //function to set the model of the car
   public function setModele($modele) {
     $this->modele = $modele;
   }
 
+  //function to get the number of doors of the car
   public function getNbPortes() {
     return $this->nbPortes;
   }
-
+  //function to set the number of doors of the car
   public function setNbPortes($nbPortes) {
     $this->nbPortes = $nbPortes;
   }
 
+  //function to get the initial speed of the car
   public function getVitesseActuelle() {
     echo "Vitesse actuelle: " . $this->vitesseActuelle . " km/h<br>";
     return $this->vitesseActuelle;
   }
 
+  //function that shows us the basic info of the car (brand,model and the number of doors)
   public function afficherInformations() {
     echo "Nom et modèle du véhicule : " . $this->marque . " ". $this->modele . "<br>";
     echo "Nombre de portes: " . $this->nbPortes . "<br>";
   }
 }
 
+// info on the 1st car
 
 echo "info véhicule 1 <br>";
 echo "****************<br>";
 
 $v1 = new Voiture("Peugeot", "408", 5,"");
 
-// Créer une instance de la classe Voiture
-// Afficher les informations de la$v1
 $v1->afficherInformations();
 
-// Démarrer la $v1
 $v1->demarrer();
 
-// Accélérer la $v1 de 50 km/h
 $v1->accelerer(50);
 $v1->getVitesseActuelle();
 
@@ -112,12 +123,12 @@ $v1->getVitesseActuelle();
 
 echo "<br>";
 
+// info on the 2nd car
 $v2 = new Voiture("Citroën","C4",3,"");
 echo "info véhicule 2 <br>";
 echo "****************<br>";
 
-// info $v2
 $v2-> afficherInformations();
-$v2-> stopper();//stop $v2
+$v2-> stopper(); 
 
 ?>
