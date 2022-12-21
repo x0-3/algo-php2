@@ -159,7 +159,6 @@ $v1->afficherInformations();
 $v1->demarrer();
 
 $v1->accelerer(50);
-$v1->ralentir(100);
 
 $v1->getVitesseActuelle();
 
