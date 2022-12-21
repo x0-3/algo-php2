@@ -35,7 +35,7 @@ class Voiture {
 
   }
 
-  //function to start the car 
+  //function to start the car if "estDemarrer==false"
   public function demarrer(){
     if($this->estDemarrer){
       echo "le vehicule est déjà démarré <br>";
@@ -64,11 +64,17 @@ class Voiture {
   public function ralentir($vitesse){
 
     if($this->estDemarrer==true){
-      $this->vitesseActuelle -= $vitesse;
-      echo "Le véhicule {$this->marque} ralentie<br>";
-      echo "La voiture ralentie de $vitesse km / h <br>";
+
+      if($this->vitesseActuelle<=$vitesse){
+        $this->vitesseActuelle=0;
+      }else{
+        $this->vitesseActuelle -= $vitesse;
+        echo "Le véhicule {$this->marque} ralentie<br>";
+        echo "La voiture ralentie de $vitesse km / h <br>";
+      }
+      
     }else{
-      echo "Demarrer la voiture {$this->marque} avant de ralentir <br>";
+        echo "Demarrer la voiture {$this->marque} avant de ralentir <br>";
     }
 
   }
@@ -153,6 +159,8 @@ $v1->afficherInformations();
 $v1->demarrer();
 
 $v1->accelerer(50);
+$v1->ralentir(100);
+
 $v1->getVitesseActuelle();
 
 echo "<br>";
@@ -163,7 +171,6 @@ echo "info véhicule 2 <br>";
 echo "****************<br>";
 
 $v2-> afficherInformations();
-$v2-> ralentir(5); 
 $v2-> stopper(); 
 
 ?>
